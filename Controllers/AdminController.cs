@@ -10,7 +10,7 @@ namespace CarInsurance.Controllers
 {
     public class AdminController : Controller
     {
-        private string _connectionString = @"Data Source=DESKTOP-TCT093C\SQLEXPRESS;Initial Catalog=Insurance1;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private string connectionString = @"C:\Program Files(x86)\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\Car Insurance.mdf";
         // GET: Admin
         public ActionResult Index()
         {
@@ -28,6 +28,7 @@ namespace CarInsurance.Controllers
 
                     quoteVms.Add(quoteVm);
                 }
+
                 return View(quoteVms);
             }
         }

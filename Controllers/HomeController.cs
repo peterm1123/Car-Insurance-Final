@@ -21,7 +21,7 @@ namespace CarInsurance.Controllers
             {
                 return View("~/Views/Shared/Error.cshtml");
             }
-
+            
                 decimal quoteAmount = 50;
 
             using (var db = new CarInsuranceEntities1())
@@ -89,7 +89,8 @@ namespace CarInsurance.Controllers
                 quote.Quote = quoteAmount;
 
                 db.InsuranceQuotes.Add(quote);
-                db.SaveChanges();
+                
+
             }
 
                 return View("Quote", quoteAmount);
